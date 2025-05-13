@@ -1,4 +1,27 @@
-# **Esercizio:** Setup Web App React
+# **Esercizio:** 
+
+### Comandi da eseguire nel terminale per inizializzare il progetto dopo averlo scaricato (lato client):
+
+Da terminale spostarsi sulla cartella di progetto ed eseguire il comando
+
+    npm create vite@latest   
+
+Aprire il progetto in VScode tramite il comando
+
+    code .
+
+Aprire il terminale in VScode ed esefuire i seguenti comandi
+
+    npm install   
+    npm install react-router-dom
+    npm i axios
+
+Per startare il client:
+
+    npm run dev
+
+
+## Consegna Day 2 - Setup Web App React 1.1
 
 ## MILESTONE 1
 - Mettiamo su un nuovo progetto React aiutandoci con Vite
@@ -24,3 +47,24 @@ Ripuliamo come sempre l’app da file e codice di esempio non necessari
 - Curare l’aspetto estetico della vostra applicazione
 
 ---
+
+## Consegna Day 3 - Setup Web App React 2.2
+
+## MILESTONE 1
+- Colleghiamo la lista dei movies a una pagina di dettaglio movie.
+- Effettuiamo una chiamata AJAX dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, comprese le sue recensioni
+
+---
+## MILESTONE 2
+- Rappresentiamo le informazioni del movie
+
+---
+## MILESTONE 3
+- Creiamo un componente ReviewCard per rappresentare le informazioni delle recensioni
+
+---
+### *Bonus*
+- Rappresentiamo tutti i voti delle recensioni con un componente ``StarRating``
+### *Bonus Bonus*
+- Sul backend, iniziamo a realizzare una rotta /movies/:id/reviews per aggiungere una nuova recensione.
+Può restituire un semplice testo "Rotta per aggiungere una recensione"

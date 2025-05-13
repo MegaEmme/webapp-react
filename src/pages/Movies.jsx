@@ -16,12 +16,12 @@ const MoviesPage = () => {
                 setMovies(response.data);
             })
             .catch(err => console.log(err));
-    }
+    };
 
     function searchMovies(e) {
         e.preventDefault();
         getMovies();
-    }
+    };
 
     useEffect(getMovies, []);
 

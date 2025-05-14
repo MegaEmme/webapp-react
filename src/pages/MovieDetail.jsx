@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import ReviewCard from "../components/ReviewCard";
 import StarRating from "../components/StarRating";
+import ReviewForm from "../components/ReviewForm";
 
 const MovieDetailPage = () => {
 
@@ -21,8 +22,6 @@ const MovieDetailPage = () => {
         return movie.reviews?.map(review => <ReviewCard key={review.id} data={review} />)
     };
 
-    console.log(movie)
-
     return (
         <article id="movie">
             {movie ? <>
@@ -38,7 +37,11 @@ const MovieDetailPage = () => {
                             Average: {movie.reviews_vote} <StarRating vote={movie.reviews_vote} />
                         </div>
                     </header>
-                    {renderReviews()}
+                    {movie.reviews?.length ? renderReviews() : <h2 className="text-center mb-4">Nessuna recensione trovata</h2>}
+                </section>
+
+                <section id="add-review">
+                    <ReviewForm movieId={id} refreshMovie={getMovie} />
                 </section>
             </> : 'Film non trovato'}
         </article>

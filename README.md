@@ -20,8 +20,11 @@ Per startare il client:
 
     npm run dev
 
+## Consegna Day 1 - Setup Web App Express
+Vedi README di webapp-express
 
-## Consegna Day 2 - Setup Web App React 1.1
+---
+## Consegna Day 2 - Setup Web App React 1/3
 
 ## MILESTONE 1
 - Mettiamo su un nuovo progetto React aiutandoci con Vite
@@ -48,7 +51,7 @@ Ripuliamo come sempre l’app da file e codice di esempio non necessari
 
 ---
 
-## Consegna Day 3 - Setup Web App React 2.2
+## Consegna Day 3 - Setup Web App React 2/3
 
 ## MILESTONE 1
 - Colleghiamo la lista dei movies a una pagina di dettaglio movie.
@@ -68,3 +71,14 @@ Ripuliamo come sempre l’app da file e codice di esempio non necessari
 ### *Bonus Bonus*
 - Sul backend, iniziamo a realizzare una rotta /movies/:id/reviews per aggiungere una nuova recensione.
 Può restituire un semplice testo "Rotta per aggiungere una recensione"
+
+---
+## Consegna Day 4 - Setup Web App React 3/3
+
+## MILESTONE FRONTEND
+Creiamo un componente che contenga il form per le recensioni
+Inseriamo questo componente nella pagina di dettaglio del film
+All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre
+
+---
+

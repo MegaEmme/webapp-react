@@ -1,12 +1,20 @@
 import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import GlobalContext from "../contexts/globalContext";
 
 const MoviesPage = () => {
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState('');
 
+    const { setIsLoading } = useContext(GlobalContext)
+
     function getMovies() {
+
+        setIsLoading(true);
+
         axios.get('http://localhost:3000/api/movies', {
             params: {
                 search
@@ -15,7 +23,8 @@ const MoviesPage = () => {
             .then(response => {
                 setMovies(response.data);
             })
-            .catch(err => console.log(err));
+            .catch(err => console.log(err))
+            .finally(() => setIsLoading(false))
     };
 
     function searchMovies(e) {
@@ -27,7 +36,10 @@ const MoviesPage = () => {
 
     return (
         <>
-            <h1 className="text-center mb-4">Films</h1>
+            <header className="d-flex justify-content-between mb-3 align-items-center">
+                <h1 className="text-center mb-4">Films</h1>
+                <Link className="btn btn-primary" to="/movies/new" alt="Aggiungi nuovo libro">Aggiungi Libro</Link>
+            </header>
             <section>
                 <div className="d-flex justify-content-between">
                     <h2>Lista film:</h2>

@@ -28,8 +28,8 @@ const ReviewForm = ({ movieId, refreshMovie }) => {
         e.preventDefault();
         axios.post(`http://127.0.0.1:3000/api/movies/${movieId}/reviews`, formData)
             .then(response => {
-                refreshMovie()
                 setFormData(initialValues)
+                refreshMovie()
             })
             .catch(err => console.log(err))
 
